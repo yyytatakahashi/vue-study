@@ -18,7 +18,7 @@
           </div>
           <div class="d-flex gap-3">
             <button type="reset" class="btn btn-secondary">リセット</button>
-            <router-link to="/bootmenu" class="btn btn-primary"> 登録 </router-link>
+            <router-link to="/bootmenu" class="btn btn-primary button"> 登録 </router-link>
           </div>
         </form>
         <h5 class="mt-4">Code</h5>
@@ -90,4 +90,15 @@ export default {
   background-color: #f7e4eb;
   padding: 2rem;
 }
+
+/* ネットで見たcssを真似してみただけなのでコメントアウト */
+/* .button {
+  color: #ffffff;
+  padding: 15px 40px;
+  background-color: #df3a3a;
+  font-family: monospace;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: inset 4px 4px 10px #bcbcbc inset -4px -4px 10px #ffffff;
+} */
 </style>

@@ -14,8 +14,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  server: {
-    host: '192.168.1.6', // 消すことを忘れないこと
-    port: 5173,
-  },
 })

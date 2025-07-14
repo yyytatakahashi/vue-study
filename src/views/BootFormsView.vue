@@ -79,6 +79,60 @@
       </div>
     </div>
   </div>
+  <div class="bootforms mb-2">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-2">チェックボックス＆ラジオボタン(Checks & Radios)</h2>
+        <p class="">
+          チェックボックスやラジオボタンには<code>.form-check</code>,<code>.form-check-input</code>,<code
+            >.form-check-label</code
+          >
+          を指定します。
+        </p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="check_1" name="agree" value="yes" />
+          <label class="form-check-label" for="check_1">規約に同意します</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="radio_1" name="gender" value="male" checked />
+          <label class="form-check-label" for="radio_1">男性</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="radio_2" name="gender" value="female" />
+          <label class="form-check-label" for="radio_2">女性</label>
+        </div>
+        <h5 class="mt-4">Code</h5>
+        <pre class="bg-dark text-white p-3 rounded"><code>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="check_1" name="agree" value="yes" /&gt;
+  &lt;label class="form-check-label" for="check_1"&gt;規約に同意します&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" id="radio_1" name="gender" value="male" checked /&gt;
+  &lt;label class="form-check-label" for="radio_1"&gt;男性&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" id="radio_2" name="gender" value="female" /&gt;
+  &lt;label class="form-check-label" for="radio_2"&gt;女性&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+    <div class="bootforms mb-2">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-2">スイッチ(Switches)</h2>
+        <p class="">
+          <code>.form-switch</code>はスイッチスタイルのチェックボックスを表示します。
+        </p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="switch_1" name="kyoka" value="yes" checked />
+          <label class="form-check-label" for="switch_1">マイクやカメラへのアクセス許可</label>
+        </div>
+        <h5 class="mt-4">Code</h5>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {

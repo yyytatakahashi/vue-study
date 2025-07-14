@@ -94,7 +94,14 @@
           <label class="form-check-label" for="check_1">規約に同意します</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" id="radio_1" name="gender" value="male" checked />
+          <input
+            class="form-check-input"
+            type="radio"
+            id="radio_1"
+            name="gender"
+            value="male"
+            checked
+          />
           <label class="form-check-label" for="radio_1">男性</label>
         </div>
         <div class="form-check">
@@ -118,16 +125,73 @@
       </div>
     </div>
   </div>
-    <div class="bootforms mb-2">
+  <div class="bootforms mb-2">
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2 class="mb-2">スイッチ(Switches)</h2>
-        <p class="">
-          <code>.form-switch</code>はスイッチスタイルのチェックボックスを表示します。
-        </p>
+        <p class=""><code>.form-switch</code>はスイッチスタイルのチェックボックスを表示します。</p>
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="switch_1" name="kyoka" value="yes" checked />
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="switch_1"
+            name="kyoka"
+            value="yes"
+            checked
+          />
           <label class="form-check-label" for="switch_1">マイクやカメラへのアクセス許可</label>
+        </div>
+        <h5 class="mt-4">Code</h5>
+      </div>
+    </div>
+  </div>
+  <div class="bootforms mb-2">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-2">インラインチェック＆ラジオ(Inline check & radio)</h2>
+        <p class="">
+          <code>.form-check-inline</code
+          >を指定すると、チェックボックスやラジオボタンを横並びに表示します。
+        </p>
+        <!--チェックボックスクラス-->
+        <div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="agree_info"
+              name="agree[]"
+              value="info"
+            />
+            <label class="form-check-label" for="agree_info">個人情報の取扱いに同意します</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="agree_mail"
+              name="agree[]"
+              value="mail"
+            />
+            <label class="form-check-label" for="agree_mail">広告メールの受信に同意します</label>
+          </div>
+        </div>
+        <!--ラジオボタンクラス-->
+        <div class="mt-3">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="radio_3" name="gender" value="male" />
+            <label class="form-check-label" for="radio_3">男性</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="radio_4"
+              name="gender"
+              value="female"
+            />
+            <label class="form-check-label" for="radio_4">女性</label>
+          </div>
         </div>
         <h5 class="mt-4">Code</h5>
       </div>

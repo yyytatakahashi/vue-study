@@ -225,7 +225,14 @@
         <!--ラジオボタンクラス-->
         <div class="mt-3">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" id="radio_3" name="gender" value="male" />
+            <input
+              class="form-check-input"
+              type="radio"
+              id="radio_3"
+              name="gender2"
+              value="male2"
+              checked
+            />
             <label class="form-check-label" for="radio_3">男性</label>
           </div>
           <div class="form-check form-check-inline">
@@ -233,8 +240,8 @@
               class="form-check-input"
               type="radio"
               id="radio_4"
-              name="gender"
-              value="female"
+              name="gender2"
+              value="female2"
             />
             <label class="form-check-label" for="radio_4">女性</label>
           </div>
@@ -291,7 +298,9 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2 class="mb-2">レンジ(Range)</h2>
-        <p class=""><code>.form-range</code> はレンジを表示します。minとmaxで最小値と最大値を設定できます。</p>
+        <p class="">
+          <code>.form-range</code> はレンジを表示します。minとmaxで最小値と最大値を設定できます。
+        </p>
         <div class="mb-2">
           <label class="form-label">例</label>
           <input

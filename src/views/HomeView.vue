@@ -27,7 +27,7 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title fw-semibold mb-3">Vue3の学習</h5>
             <p class="card-text text-muted mb-4">Vue.jsについて学習しましょう。</p>
-            <router-link class="btn btn-outline-primary mt-auto" to="/vue">詳しく見る</router-link>
+            <router-link class="btn btn-outline-primary mt-auto disabled" to="/vue">開発中</router-link>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title fw-semibold mb-3">githubの使い方</h5>
             <p class="card-text text-muted mb-4">githubの使い方について</p>
-            <router-link class="btn btn-outline-primary mt-auto" to="/vue">詳しく見る</router-link>
+            <router-link class="btn btn-outline-primary mt-auto" to="/git">詳しく見る</router-link>
           </div>
         </div>
       </div>

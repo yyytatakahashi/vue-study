@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
+      path: '/git',
+      name: 'git',
+      component: () => import('../views/GitView.vue'),
+    },
+    {
       path: '/bootmenu',
       name: 'bootMenu',
       component: () => import('../views/BootMenuView.vue'),

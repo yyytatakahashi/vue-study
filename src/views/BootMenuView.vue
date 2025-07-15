@@ -41,10 +41,9 @@
       </div>
     </div>
   </div>
+  <FooterParts :cancelpage="'/'" :okVisible="false" />
 </template>
 
-<script>
-export default {
-  name: 'bootMenu',
-}
+<script setup>
+import FooterParts from '../components/FooterParts.vue'
 </script>

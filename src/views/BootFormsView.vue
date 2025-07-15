@@ -328,9 +328,11 @@
       </div>
     </div>
   </div>
+  <FooterParts :cancelpage="'/bootmenu'" :okVisible="false" />
 </template>
 <script setup>
 import { ref } from 'vue'
+import FooterParts from '../components/FooterParts.vue'
 
 /**
  * コードブロックの表示・非表示を管理するリアクティブな状態

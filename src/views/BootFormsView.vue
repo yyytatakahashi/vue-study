@@ -21,8 +21,13 @@
             <router-link to="/bootmenu" class="btn btn-primary button"> 登録 </router-link>
           </div>
         </form>
-        <h5 class="mt-4">Code</h5>
-        <pre class="bg-dark text-white p-3 rounded"><code>&lt;form&gt;
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(1)">
+            {{ showCode1 ? '非表示' : '表示' }}
+          </button>
+        </h5>
+        <pre v-if="showCode1" class="bg-dark text-white p-3 rounded"><code>&lt;form&gt;
   &lt;div class="mb-2"&gt;
     &lt;label class="form-label" for="name"&gt;名前&lt;/label&gt;
     &lt;input class="form-control" type="text" name="name" id="name"&gt;
@@ -48,11 +53,17 @@
             <div class="form-text">全角文字で入力してください</div>
           </div>
         </form>
-        <h5 class="mt-4">Code</h5>
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(2)">
+            {{ showCode2 ? '非表示' : '表示' }}
+          </button>
+        </h5>
         <pre
+          v-if="showCode2"
           class="bg-dark text-white p-3 rounded"
         ><code>&lt;input class="form-control" type="text" name="name"&gt;
-  &lt;div class="form-text for="name"&gt;全角文字で入力してください&lt;/div&gt;
+  &lt;div class="form-text" for="name"&gt;全角文字で入力してください&lt;/div&gt;
 </code></pre>
       </div>
     </div>
@@ -70,11 +81,18 @@
           <input class="form-control mb-1" type="text" />
           <input class="form-control form-control-lg" type="text" />
         </div>
-        <h5 class="mt-4">Code</h5>
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(3)">
+            {{ showCode3 ? '非表示' : '表示' }}
+          </button>
+        </h5>
         <pre
+          v-if="showCode3"
           class="bg-dark text-white p-3 rounded"
-        ><code>&lt;input class="form-control" type="text" name="name"&gt;
-  &lt;div class="form-text for="name"&gt;全角文字で入力してください&lt;/div&gt;
+        ><code>&lt;input class="form-control form-control-sm" type="text" /&gt;
+&lt;input class="form-control" type="text" /&gt;
+&lt;input class="form-control form-control-lg" type="text" /&gt;
 </code></pre>
       </div>
     </div>
@@ -108,8 +126,16 @@
           <input class="form-check-input" type="radio" id="radio_2" name="gender" value="female" />
           <label class="form-check-label" for="radio_2">女性</label>
         </div>
-        <h5 class="mt-4">Code</h5>
-        <pre class="bg-dark text-white p-3 rounded"><code>&lt;div class="form-check"&gt;
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(4)">
+            {{ showCode4 ? '非表示' : '表示' }}
+          </button>
+        </h5>
+        <pre
+          v-if="showCode4"
+          class="bg-dark text-white p-3 rounded"
+        ><code>&lt;div class="form-check"&gt;
   &lt;input class="form-check-input" type="checkbox" id="check_1" name="agree" value="yes" /&gt;
   &lt;label class="form-check-label" for="check_1"&gt;規約に同意します&lt;/label&gt;
 &lt;/div&gt;
@@ -141,7 +167,27 @@
           />
           <label class="form-check-label" for="switch_1">マイクやカメラへのアクセス許可</label>
         </div>
-        <h5 class="mt-4">Code</h5>
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(5)">
+            {{ showCode5 ? '非表示' : '表示' }}
+          </button>
+        </h5>
+        <pre
+          v-if="showCode5"
+          class="bg-dark text-white p-3 rounded"
+        ><code>&lt;div class="form-check form-switch"&gt;
+  &lt;input
+    class="form-check-input"
+    type="checkbox"
+    id="switch_1"
+    name="kyoka"
+    value="yes"
+    checked
+  /&gt;
+  &lt;label class="form-check-label" for="switch_1"&gt;マイクやカメラへのアクセス許可&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
       </div>
     </div>
   </div>
@@ -193,14 +239,135 @@
             <label class="form-check-label" for="radio_4">女性</label>
           </div>
         </div>
-        <h5 class="mt-4">Code</h5>
+        <h5 class="mt-4">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(6)">
+            {{ showCode6 ? '非表示' : '表示' }}
+          </button>
+        </h5>
+        <pre
+          v-if="showCode6"
+          class="bg-dark text-white p-3 rounded"
+        ><code>&lt;div class="form-check form-check-inline"&gt;
+  &lt;input
+    class="form-check-input"
+    type="checkbox"
+    id="agree_info"
+    name="agree[]"
+    value="info"
+  /&gt;
+  &lt;label class="form-check-label" for="agree_info"&gt;個人情報の取扱いに同意します&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input
+    class="form-check-input"
+    type="checkbox"
+    id="agree_mail"
+    name="agree[]"
+    value="mail"
+  /&gt;
+  &lt;label class="form-check-label" for="agree_mail"&gt;広告メールの受信に同意します&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="radio" id="radio_3" name="gender" value="male" /&gt;
+  &lt;label class="form-check-label" for="radio_3"&gt;男性&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input
+    class="form-check-input"
+    type="radio"
+    id="radio_4"
+    name="gender"
+    value="female"
+  /&gt;
+  &lt;label class="form-check-label" for="radio_4"&gt;女性&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="bootforms mb-2">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-2">レンジ(Range)</h2>
+        <p class=""><code>.form-range</code> はレンジを表示します。minとmaxで最小値と最大値を設定できます。</p>
+        <div class="mb-2">
+          <label class="form-label">例</label>
+          <input
+            class="form-range"
+            type="range"
+            id="range_1"
+            v-model="rangeValue"
+            min="0"
+            max="100"
+          />
+          <div>現在の値: {{ rangeValue }}</div>
+        </div>
+        <h5 class="mt-3">
+          Code
+          <button type="button" class="btn btn-sm btn-outline-info ms-2" @click="toggleCode(7)">
+            {{ showCode7 ? '非表示' : '表示' }}
+          </button>
+        </h5>
+        <pre
+          v-if="showCode7"
+          class="bg-dark text-white p-3 rounded"
+        ><code>&lt;label class="form-label"&gt;例&lt;/label&gt;
+&lt;input class="form-range" type="range" id="range_1" /&gt;
+</code></pre>
       </div>
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: 'bootForms',
+<script setup>
+import { ref } from 'vue'
+
+/**
+ * コードブロックの表示・非表示を管理するリアクティブな状態
+ */
+const showCode1 = ref(false)
+const showCode2 = ref(false)
+const showCode3 = ref(false)
+const showCode4 = ref(false)
+const showCode5 = ref(false)
+const showCode6 = ref(false)
+const showCode7 = ref(false)
+
+// レンジの値を管理するリアクティブ変数
+const rangeValue = ref(50) // 初期値50
+
+/**
+ * 指定された番号のコードブロックの表示状態を切り替える
+ * @param {number} num - 切り替えるコードブロックの番号
+ */
+function toggleCode(num) {
+  switch (num) {
+    case 1:
+      showCode1.value = !showCode1.value
+      break
+    case 2:
+      showCode2.value = !showCode2.value
+      break
+    case 3:
+      showCode3.value = !showCode3.value
+      break
+    case 4:
+      showCode4.value = !showCode4.value
+      break
+    case 5:
+      showCode5.value = !showCode5.value
+      break
+    case 6:
+      showCode6.value = !showCode6.value
+      break
+    case 7:
+      showCode7.value = !showCode7.value
+      break
+    default:
+      // 無効な番号は何もしない
+      break
+  }
 }
 </script>
 <style scoped>

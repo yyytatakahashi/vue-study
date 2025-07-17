@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/GitView.vue'),
     },
     {
+      path: '/crud',
+      name: 'Crud',
+      component: () => import('../views/CrudView.vue'),
+    },
+    {
       path: '/bootmenu',
       name: 'bootMenu',
       component: () => import('../views/BootMenuView.vue'),

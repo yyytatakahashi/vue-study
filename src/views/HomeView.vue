@@ -25,9 +25,9 @@
       <div class="col-md-6">
         <div class="card border-0 shadow-sm rounded-4 h-100">
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title fw-semibold mb-3">Vue3の学習</h5>
-            <p class="card-text text-muted mb-4">Vue.jsについて学習しましょう。</p>
-            <router-link class="btn btn-outline-primary mt-auto disabled" to="/vue">開発中</router-link>
+            <h5 class="card-title fw-semibold mb-3">CRUDシステムサンプル</h5>
+            <p class="card-text text-muted mb-4">CRUDについて学習しましょう。</p>
+            <router-link class="btn btn-outline-primary mt-auto" to="/crud">詳しく見る</router-link>
           </div>
         </div>
       </div>

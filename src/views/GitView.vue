@@ -5,9 +5,13 @@
       <b-tab title="1. Gitのインストール方法">
         <h2 class="mb-3">Gitのインストール手順（Windows）</h2>
         <ol>
-          <li><a href="https://git-scm.com/" target="_blank">公式サイト</a>にアクセスして「Download for Windows」をクリック</li>
+          <li>
+            <a href="https://git-scm.com/" target="_blank">公式サイト</a>にアクセスして「Download
+            for Windows」をクリック
+          </li>
           <li>ダウンロードしたインストーラーを実行</li>
-          <li>基本は「Next」連打でOK（以下はおすすめ設定）
+          <li>
+            基本は「Next」連打でOK（以下はおすすめ設定）
             <ul>
               <li>PATH：<code>Git from the command line...</code></li>
               <li>改行コード：<code>Checkout Windows-style...</code></li>
@@ -15,7 +19,9 @@
           </li>
           <li>インストール後、コマンドプロンプトやGit Bashで<code>git --version</code>で確認</li>
         </ol>
-        <p class="mt-3 text-danger">よくあるミス：環境変数PATHにGitが入っていないとコマンドが使えない</p>
+        <p class="mt-3 text-danger">
+          よくあるミス：環境変数PATHにGitが入っていないとコマンドが使えない
+        </p>
       </b-tab>
 
       <!-- 2. GitHubにリポジトリをアップロードする方法 -->
@@ -23,7 +29,8 @@
         <h2 class="mb-3">ローカルプロジェクトをGitHubにアップロード</h2>
         <ol>
           <li>GitHubで新規リポジトリを作成（READMEはチェックなし）</li>
-          <li>ターミナルで以下を実行（プロジェクトのあるフォルダで）
+          <li>
+            ターミナルで以下を実行（プロジェクトのあるフォルダで）
             <pre><code>git init
 git add .
 git commit -m "初回コミット"
@@ -43,17 +50,22 @@ git push -u origin main</code></pre>
       <b-tab title="3. ブランチ作成とプルリクエスト">
         <h2 class="mb-3">新しいブランチの作成とプルリク</h2>
         <ol>
-          <li>ブランチを作成＆切り替え：<br>
+          <li>
+            ブランチを作成＆切り替え：<br />
             <code>git checkout -b feature-branch</code>
           </li>
-          <li>ファイル編集・コミット：
+          <li>
+            ファイル編集・コミット：
             <pre><code>git add .
 git commit -m "新機能追加"</code></pre>
           </li>
-          <li>GitHubにPush：<br>
+          <li>
+            GitHubにPush：<br />
             <code>git push -u origin feature-branch</code>
           </li>
-          <li>GitHub上で「Compare & pull request」ボタンをクリックして、mainブランチへマージ依頼</li>
+          <li>
+            GitHub上で「Compare & pull request」ボタンをクリックして、mainブランチへマージ依頼
+          </li>
         </ol>
         <h5 class="mt-3">確認方法</h5>
         <ul>
@@ -63,8 +75,10 @@ git commit -m "新機能追加"</code></pre>
       </b-tab>
     </b-tabs>
   </div>
+  <FooterParts :cancelpage="'/'" :okVisible="false" />
 </template>
 <script setup>
+import FooterParts from '../components/FooterParts.vue'
 </script>
 <style scoped>
 .container {

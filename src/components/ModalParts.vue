@@ -21,12 +21,13 @@
 
 <template>
   <!-- モーダル全体のオーバーレイ -->
+  <!-- 背景クリックで閉じる -->
   <div
     class="modal fade show d-block"
     tabindex="-1"
     role="dialog"
     v-if="visible"
-    @click.self="close"  <!-- 背景クリックで閉じる -->
+    @click.self="close"
   >
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">

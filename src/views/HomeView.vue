@@ -41,6 +41,18 @@
           </div>
         </div>
       </div>
+      <!-- カード4 -->
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm rounded-4 h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold mb-3">デプロイ方法</h5>
+            <p class="card-text text-muted mb-4">デプロイ方法について</p>
+            <router-link class="btn btn-outline-primary mt-auto" to="/git-deploy"
+              >詳しく見る</router-link
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
